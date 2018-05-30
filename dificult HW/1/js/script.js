@@ -1,23 +1,24 @@
 window.onload = function() {
-    var budget = prompt('Enter your mounth budget here:');
-    	shopName = prompt('enter name of your shop here:');
-    	dayBudget = budget/30;
-
-    	// console.log(budget);
-    	// console.log(shopName);
-
-    	mainList = {
-    		budget: budget,
-    		shpoName : shopName,
-    		shopGoods: new Array(),
-    		employers: new Object(),
-    		open
-    	};
-    	for (var i = 0; i < 3; i++) {
-    		mainList.shopGoods.push(prompt('What items are you going to sail?'));
-    	};
-
-    	// console.log(mainList['shopGoods']);
-
-    	alert('your daybudget is ' + dayBudget);
-  };
+    var num = 33721;
+    console.log(typeof(num));
+    num = String(num);
+    console.log(typeof(num));
+    var strArr = num.split("");
+    console.log(strArr);
+    var numArr = [];
+    for (var i = 0; i <strArr.length; i++) {
+        numArr.push(Number(strArr[i]));
+    };
+    console.log(numArr);
+    var result = numArr.reduce(function(a, b){
+        return a*b;
+    });
+    console.log(result);
+    var resultCube = Math.pow(result, 3);
+    console.log(resultCube);
+    var newStrArr = String(resultCube).split("");
+    console.log(newStrArr);
+    alert(newStrArr[0] + newStrArr[1]);
+    //if somebody is checking it: 
+    // I NOW THAT THIS IS "SHITCODE", but it`s all i have))
+}
