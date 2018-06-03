@@ -1,71 +1,58 @@
 window.onload = function() {
-    var budget = prompt('Enter your mounth budget here:');
-    	shopName = prompt('enter name of your shop here:');
-    	dayBudget = budget/30;
+	let str = 'урок-3-был слишком легким';
+	let newStr = str[0].toUpperCase() + str.slice(1);
+	// alert(newStr); 
 
-    	mainList = {
-    		budget: budget,
-    		shpoName : shopName,
-    		shopGoods: [],
-    		employers: {},
-    		open
-    	};
+	newStr = newStr.split('');
+	for(var i = 0; i < newStr.length; i++){
+		
+		if(newStr[i] == '-'){
+			newStr[i] = ' ';			
+		};
+	};
+	newStr = newStr.join('');
+	console.log(newStr);
 
-    	// =============================
-    	// ==== Made by "FOR" cycle ====
-    	// =============================
-        time = 9;
-        /*
-        объявил переменную time потому что
-        иначе ловлю андефайнд. хотя в
-        видео без объявленной переменной
-        каким то чудом срабатывает условие,
-        что time>8 && time<20
-        */
-    	for (var i = 0; i < 3; i++) {
-            let a = prompt('What items are you going to sail?');
-            mainList.shopGoods[i] = (a);
-            if((typeof(a)) === 'string' && (typeof(a)) === null && a != '' && a.length < 50){
-                console.log('everything is right');
-                mainList.shopGoods[i] = (a);
-            }else {
-                
-            }
+	newStr = newStr.split(' ');
+	let word;
+	for(var i = 0; i < newStr.length; i++){
+		
+		if(newStr[i] == 'легким'){
+			word = newStr[i];						
+		};
+	};
+	word = word.split('');
+	word[word.length - 2] = 'о';
+	word[word.length - 1] = 'о';
+	word = word.join('');
+	console.log(word);
 
-            if(time < 0){                
-                console.log('it can\'t be true');
-            }else if(time > 8 && time < 20){
-                console.log('time to work!');
-            }else if(time < 24){
-                console.log('it\'s too late now')
-            }else if (time > 24){
-                console.log('there are just 24 hours in the day');
-            }
 
-        };
-        console.log(mainList);
+	let arr = [20, 33, 1, "Человек", 2, 3];
+	let cubeSum = 0;
+	for (var i = 0; i < arr.length; i++) {
+		
+		if(typeof(arr[i]) == 'number'){
+			arr[i] = Math.pow(arr[i], 3);
+			cubeSum += arr[i];
+		}
 
-    	// ===============================
-    	// ==== Made by "WHILE" cycle ====
-    	//================================
+	}
+	console.log(Math.sqrt(cubeSum));
+	// console.log(arr);
 
-    	// let i = 0;
-    	// while (i < 3) {
-    	// 	mainList.shopGoods.push(prompt('What items are you going to sail?'));
-    	// 	i++;
-    	// }
+	function difHW (a) {
+		if(typeof(a) == 'string'){
+			alert('функции в качестве аргумента передана строка');
+			a = a.trim();
+			if(a.length > 49){
+				console.log(a.substring(0,49) + '...');
+			}
+			// console.log(a);
+		} 
+	}
 
-    	// ===============================
-    	// == Made by " DO WHILE" cycle ==
-    	//================================
+	difHW('   DWwdADAAEF  lweuhdLKJDNjdn;OWQILJD;alksndWND;olqkwjd;OALKDSJoalwkdj;OALKWDJoalkcn.lkdn.oelnjcsldknc.oLKNCOLAKNC.LKSN.LWK');
 
-    	// do{
-    	// 	mainList.shopGoods.push(prompt('What items are you going to sail?'));
-    	//  	i++;
-    	// }
-    	// while(i < 3);
 
-    	// console.log(mainList['shopGoods']);
-
-    	alert('your daybudget is ' + dayBudget);
-  };
+};
