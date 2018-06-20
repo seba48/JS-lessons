@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', function() {
+	require("babel-polyfill");
 
 
     let tab = document.getElementsByClassName('info-header-tab'),
