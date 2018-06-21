@@ -236,6 +236,19 @@ window.addEventListener('DOMContentLoaded', function() {
         showSlides(slideIndex = n);
     }
 
+    persons.onkeypress = function(event){
+        event = event || window.event;
+        if(event.charCode && (event.charCode < 48 || event.charCode > 57)){
+            return false;
+        };
+    };
+
+    restDays.onkeypress = function(event){
+        event = event || window.event;
+        if(event.charCode && (event.charCode < 48 || event.charCode > 57)){
+            return false;
+        };
+    }
     prev.addEventListener('click', function() {
         plusSlides(-1);
     });
